@@ -1,0 +1,30 @@
+<mvc:View controllerName="com.jonasdp.WatMoetWaar.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+	<Page
+		showHeader="false" >
+		<subHeader>
+			<Toolbar>
+				<SearchField
+					placeholder="{i18n>master.search.placeholder}"
+					liveChange="onSearch" />
+			</Toolbar>
+		</subHeader>
+		<content>
+			<List
+				id="idList"
+				items="{Items>/}"
+				mode="SingleSelectMaster"
+				selectionChange="onSelectionChange"
+				growing="true"
+				growingThreshold="30"
+				growingScrollToLoad="true">
+				<items>
+					<StandardListItem
+						title="{Items>label}" />
+				</items>
+			</List>
+		</content>
+	</Page>
+	</App>
+</mvc:View>
